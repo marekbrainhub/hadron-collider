@@ -23,8 +23,8 @@ module.exports = [
     message: 'Select features:',
     choices: [
       { name: 'hadron-express', checked: true },
-      { name: 'hadron-typeorm' },
       { name: 'hadron-validation' },
+      { name: 'hadron-typeorm' },
     ],
   },
 ];

@@ -1,4 +1,4 @@
-<%_ if(packages.includes('hadron-express')) { _%>
+<%_ if (packages.includes('hadron-express')) { _%>
 module.exports = {
   ...require('./helloWorld.js'),
 }

@@ -1,0 +1,18 @@
+<%_ if (packages.includes('hadron-validation')) { _%>
+{
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "number"
+    },
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    }
+  },
+  "required": [ "name", "type" ],
+  "additionalProperties": false
+}
+<%_ } _%>
