@@ -1,0 +1,14 @@
+{
+  "name": "hadron-cli",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "dependencies": {
+    "ejs": "^2.6.1",
+    "fs-extra": "^6.0.1",
+    "inquirer": "^6.0.0"
+  }
+}
