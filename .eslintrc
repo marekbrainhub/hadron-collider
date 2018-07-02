@@ -1,0 +1,7 @@
+{
+  "extends": "brainhub",
+  "env": {
+    "amd": true,
+    "node": true
+  }
+}
