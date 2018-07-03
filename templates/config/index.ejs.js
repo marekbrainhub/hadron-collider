@@ -4,4 +4,12 @@ module.exports = {
     ...require('./routes'),
   },
   <%_ } _%>
+  <%_ if(packages.includes('hadron-typeorm')) { _%>
+  connection: {
+    ...require('./typeorm'),
+  },
+  entities: {
+    ...require('./entities'),
+  }
+  <%_ } _%>
 }

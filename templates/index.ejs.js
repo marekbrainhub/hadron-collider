@@ -2,7 +2,10 @@ const hadron = require('@brainhubeu/hadron-core').default;
 
 <%_ if(packages.includes('hadron-express')) { _%>
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const app = express();
+app.use(bodyParser.json());
 <%_ } _%>
 
 const config = require('./config');

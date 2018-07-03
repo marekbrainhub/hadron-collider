@@ -19,7 +19,13 @@ module.exports = function createDirectoryContents(templatePath, projectPath, dat
     // If the file is not a directory, compile ejs and copy the content.
     if (stats.isFile()) {
       const contents = fs.readFileSync(templateFilePath, 'utf-8');
-      const compiled = ejs.render(contents, data);
+      let compiled
+      try {
+        compiled = ejs.render(contents, data);
+      } catch(e) {
+        console.log(e);
+        console.log('In file: ', templateFilePath);
+      }
       const writePath = path.resolve(pwd, projectPath, newFile);
       fs.writeFileSync(writePath, compiled, 'utf-8');
     // If the file is a directory, create a new directory and recursively apply this function to it.

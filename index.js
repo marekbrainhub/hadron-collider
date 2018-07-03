@@ -19,7 +19,7 @@ inquirer.prompt(questions).then(answers => {
   console.log('Removing residual files...');
   clearEmptyFiles(projectPath);
 
-  console.log('Done!\n');
+  console.log('\nDone!\n');
   console.log('You can now enter your project and start development:\n');
   console.log(`   cd ${answers.projectName} && npm install`);
   console.log('   npm run dev');
