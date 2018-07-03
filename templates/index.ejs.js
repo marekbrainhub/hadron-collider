@@ -21,6 +21,7 @@ const dependencies = [
 <%_ if(packages.includes('hadron-express')) { _%>
 hadron(app, dependencies, config).then(() => {
   app.listen(port, () =>
+    // eslint-disable-next-line no-console
     console.log(`Listening on http://localhost:${port}`),
   );
 });

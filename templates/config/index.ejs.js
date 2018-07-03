@@ -10,6 +10,11 @@ module.exports = {
   },
   entities: {
     ...require('./entities'),
-  }
+  },
   <%_ } _%>
-}
+  <%_ if(packages.includes('hadron-events')) { _%>
+  events: {
+  ...require('./events'),
+  },
+  <%_ } _%>
+};

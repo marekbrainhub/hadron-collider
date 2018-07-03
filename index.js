@@ -1,7 +1,8 @@
-const inquirer = require('inquirer');
+const inquirer = require('inquirer')
 
 const fs = require('fs-extra');
 const path = require('path');
+const { exec } = require('child_process');
 
 const { createDirectoryContents, clearEmptyFiles } = require('./utils');
 const questions = require('./questions');
@@ -18,6 +19,14 @@ inquirer.prompt(questions).then(answers => {
 
   console.log('Removing residual files...');
   clearEmptyFiles(projectPath);
+
+  if (answers.packageManager === 'npm') {
+    console.log('Running npm install...');
+    exec(`npm install --prefix ${answers.projectName}`);
+  } else if (answers.packageManager === 'yarn') {
+    console.log('Running yarn...');
+    exec(`yarn install --cwd ${answers.projectName}`);
+  }
 
   console.log('\nDone!\n');
   console.log('You can now enter your project and start development:\n');
