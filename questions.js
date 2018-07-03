@@ -31,8 +31,8 @@ module.exports = [
   {
     type: 'list',
     name: 'packageManager',
-    message: 'What package manager do you want to use?',
-    choices: [ 'yarn', 'npm' ],
+    message: 'What package manager do you want to use to install dependencies?',
+    choices: [ 'yarn', 'npm', 'none' ],
   },
 ];
 

@@ -14,5 +14,8 @@
   "devDependencies": {
     "eslint": "^5.0.1",
     "eslint-config-brainhub": "^1.9.0"
+  },
+  "bin": {
+    "collider": "./index.js"
   }
 }
