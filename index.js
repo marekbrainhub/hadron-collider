@@ -1,13 +1,12 @@
 #!/usr/bin/env node
 
-const inquirer = require('inquirer')
+const inquirer = require('inquirer');
 
 const fs = require('fs-extra');
 const path = require('path');
-const { exec } = require('child_process');
 
-const { 
-  createDirectoryContents, 
+const {
+  createDirectoryContents,
   clearEmptyFiles,
   runPackageManager,
 } = require('./utils');
@@ -16,7 +15,7 @@ const questions = require('./questions');
 
 const pwd = process.cwd();
 
-inquirer.prompt(questions).then(async (answers) => {
+inquirer.prompt(questions).then(async answers => {
   console.log('Creating the project directory...');
   const projectPath = path.resolve(pwd, answers.projectName);
   fs.mkdirSync(projectPath);

@@ -25,14 +25,14 @@ module.exports = [
       { name: 'hadron-express', checked: true },
       { name: 'hadron-validation' },
       { name: 'hadron-typeorm' },
-      { name: 'hadron-events' }
+      { name: 'hadron-events' },
     ],
   },
   {
     type: 'list',
     name: 'packageManager',
     message: 'What package manager do you want to use to install dependencies?',
-    choices: [ 'yarn', 'npm', 'none' ],
+    choices: ['yarn', 'npm', 'none'],
   },
 ];
 

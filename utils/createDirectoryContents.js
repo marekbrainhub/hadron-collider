@@ -19,10 +19,10 @@ module.exports = function createDirectoryContents(templatePath, projectPath, dat
     // If the file is not a directory, compile ejs and copy the content.
     if (stats.isFile()) {
       const contents = fs.readFileSync(templateFilePath, 'utf-8');
-      let compiled
+      let compiled;
       try {
         compiled = ejs.render(contents, data);
-      } catch(e) {
+      } catch (e) {
         console.log(e);
         console.log('In file: ', templateFilePath);
       }
