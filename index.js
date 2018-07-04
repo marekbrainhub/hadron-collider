@@ -26,8 +26,10 @@ inquirer.prompt(questions).then(async answers => {
   console.log('Removing residual files...');
   clearEmptyFiles(projectPath);
 
-  console.log('Running pacakge manager...\n');
-  await runPackageManager(answers.packageManager, answers.projectName);
+  if(answers.packageManager !== 'none') {
+    console.log('Running pacakge manager...\n');
+    await runPackageManager(answers.packageManager, answers.projectName);
+  }
 
   console.log('\nDone!\n');
   console.log('You can now enter your project and start development:\n');
