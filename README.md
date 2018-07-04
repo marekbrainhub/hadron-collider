@@ -1,8 +1,6 @@
-<p align="center">
-  <h1>Hadron Collider</h1>
-</p>
+# Hadron Collider
 
-A project generator for [Hadron](http://hadron.pro). It is the quickest way to get started with Hadron.
+<p align="center">A project generator for [Hadron](http://hadron.pro). It is the quickest way to get started with Hadron.</p>
 
 ## Installation
 
