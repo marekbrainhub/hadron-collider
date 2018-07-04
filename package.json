@@ -16,6 +16,6 @@
     "eslint-config-brainhub": "^1.9.0"
   },
   "bin": {
-    "collider": "./index.js"
+    "collide": "./index.js"
   }
 }
