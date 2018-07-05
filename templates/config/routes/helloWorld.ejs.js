@@ -5,8 +5,8 @@ module.exports = {
     methods: ['GET'],
     callback: () => ({
       status: 200,
-      body: "Hello world!",
+      body: 'Hello world!',
     }),
-  }
-}
+  },
+};
 <%_ } _%>

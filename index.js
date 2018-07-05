@@ -9,6 +9,7 @@ const {
   createDirectoryContents,
   clearEmptyFiles,
   runPackageManager,
+  runLinter,
 } = require('./utils');
 
 const questions = require('./questions');
@@ -26,9 +27,14 @@ inquirer.prompt(questions).then(async answers => {
   console.log('Removing residual files...');
   clearEmptyFiles(projectPath);
 
-  if(answers.packageManager !== 'none') {
+  if (answers.packageManager !== 'none') {
     console.log('Running pacakge manager...\n');
     await runPackageManager(answers.packageManager, answers.projectName);
+  }
+
+  if (answers.linter !== 'none' && answers.packageManager !== 'none') {
+    console.log('Run$ing linter...');
+    await runLinter(answers.projectName);
   }
 
   console.log('\nDone!\n');

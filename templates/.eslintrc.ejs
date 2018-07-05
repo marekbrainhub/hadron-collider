@@ -1,0 +1,13 @@
+<%_ if(linter !== 'none') { _%>
+{
+  <%_ if(linter === 'brainhub') { _%>
+  "extends": "brainhub"
+  <%_ } _%>
+  <%_ if(linter === 'airbnb') { _%>
+  "extends": "airbnb"
+  <%_ } _%>
+  <%_ if(linter === 'standard') { _%>
+  "extends": "standard"
+  <%_ } _%>
+}
+<%_ } _%>

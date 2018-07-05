@@ -16,7 +16,7 @@ const dependencies = [
   <%_ packages.forEach(function(package) { _%>
   require('@brainhubeu/<%-package%>'),
   <%_ }) _%>
-]
+];
 
 <%_ if(packages.includes('hadron-express')) { _%>
 hadron(app, dependencies, config).then(() => {

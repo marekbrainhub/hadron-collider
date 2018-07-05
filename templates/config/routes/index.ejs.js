@@ -4,5 +4,5 @@ module.exports = {
   <%_ if (packages.includes('hadron-typeorm')) { _%>
   ...require('./user'),
   <%_ } _%>
-}
+};
 <%_ } _%>

@@ -17,8 +17,29 @@
     "@brainhubeu/hadron-core": "^1.0.0"
   },
   "devDependencies": {
-    "nodemon": "*",
-    "eslint": "*"
+    <%_ if(linter !== 'none') { _%>
+    "eslint": "^5.0.1",
+    <%_ } _%>
+    <%_ if(linter === 'brainhub') { _%>
+    "eslint-config-brainhub": "^1.9.0",
+    "eslint-plugin-babel": "^5.0.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-react": "^7.6.1",
+    <%_ } _%>
+    <%_ if(linter === 'airbnb') { _%>
+    "eslint-config-airbnb": "^17.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-jsx-a11y": "^6.1.0",
+    "eslint-plugin-react": "^7.10.0",
+    <%_ } _%>
+    <%_ if(linter === 'standard') { _%>
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.8.0",
+    "eslint-plugin-standard": "^3.1.0",
+    <%_ } _%>
+    "nodemon": "*"
   },
   "scripts": {
     "start": "node index.js",

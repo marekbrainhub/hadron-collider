@@ -30,6 +30,12 @@ module.exports = [
   },
   {
     type: 'list',
+    name: 'linter',
+    message: 'What config of ESLint do you want to use?',
+    choices: ['brainhub', 'standard', 'airbnb', 'none'],
+  },
+  {
+    type: 'list',
     name: 'packageManager',
     message: 'What package manager do you want to use to install dependencies?',
     choices: ['yarn', 'npm', 'none'],
