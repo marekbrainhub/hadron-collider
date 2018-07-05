@@ -33,7 +33,7 @@ inquirer.prompt(questions).then(async answers => {
   }
 
   if (answers.linter !== 'none' && answers.packageManager !== 'none') {
-    console.log('Run$ing linter...');
+    console.log('Runing linter...');
     await runLinter(answers.projectName);
   }
 
