@@ -1,6 +1,6 @@
-# Hadron Collider
+# Collider
 
-<p align="center">A project generator for <a href="http://hadron.pro">Hadron</a>. It is the quickest way to get started with Hadron.</p>
+A project generator for [Hadron](http://hadron.pro). It is the quickest way to get started with Hadron.
 
 ## Installation
 
@@ -15,15 +15,16 @@ npm install --global
 Just navigate to the directory where you want to spawn your project and run
 
 ```sh
-collider
+collide
 ```
 
 ## Features
 
 - Support for TypeScript apps *(work in progress)*
+- Support for eslint presets *(work in progress)*
 - Generation of boilerplate for several useful Hadron packages:
   - `hadron-express`
   - `hadron-validation`
   - `hadron-typeorm`
   - `hadron-events`
-- Support for both npm and yarn.
+- Support for both npm and yarn
