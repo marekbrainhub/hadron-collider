@@ -1,5 +1,5 @@
 <%_ if(packages.includes('hadron-typeorm')) { _%>
-const { user } = require('./entities');
+const entitySchemas = require('./entities');
 
 module.exports = {
   connectionName: 'mysqlConnection',
@@ -9,7 +9,7 @@ module.exports = {
   username: 'root',
   password: '',
   database: 'hadron',
-  entitySchemas: [user],
+  entitySchemas,
   synchronize: true,
 };
 <%_ } _%>
