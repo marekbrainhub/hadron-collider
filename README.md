@@ -21,7 +21,7 @@ collide
 ## Features
 
 - Support for TypeScript apps *(work in progress)*
-- Support for eslint presets *(work in progress)*
+- Support for eslint presets
 - Generation of boilerplate for several useful Hadron packages:
   - `hadron-express`
   - `hadron-validation`
