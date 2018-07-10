@@ -5,9 +5,7 @@ A project generator for [Hadron](http://hadron.pro). It is the quickest way to g
 ## Installation
 
 ```sh
-# npm install --global @brainhubeu/hadron-collider
-git clone https://github.com/marekbrainhub/hadron-collider && cd hadron-collider
-npm install --global
+npm install --global hadron-collider
 ```
 
 ## Quick start
