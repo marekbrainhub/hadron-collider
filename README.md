@@ -28,3 +28,7 @@ collide
   - `hadron-typeorm`
   - `hadron-events`
 - Support for both npm and yarn
+
+## Todo:
+
+- Update Babel to version 7 when it comes out of beta.
