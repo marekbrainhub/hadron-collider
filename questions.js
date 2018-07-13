@@ -29,10 +29,10 @@ module.exports = [
     choices: ['brainhub', 'standard', 'airbnb', 'none'],
   },
   {
-    type: 'list',
+    type: 'confirm',
     name: 'babel',
-    message: 'What style of imports do you want to use?',
-    choices: ['require', 'import'],
+    message: 'Do you want to initialize Babel?',
+    default: false,
   },
   {
     type: 'list',

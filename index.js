@@ -24,7 +24,7 @@ inquirer.prompt(questions).then(async answers => {
 
   let projectPath = path.resolve(pwd, answers.projectName);
   fs.mkdirSync(projectPath);
-  if (answers.babel === 'import') {
+  if (answers.babel) {
     projectPath = path.resolve(projectPath, 'src');
     fs.mkdirSync(projectPath);
   }
@@ -35,14 +35,16 @@ inquirer.prompt(questions).then(async answers => {
   console.log('Removing residual files...');
   clearEmptyFiles(projectPath);
 
-  console.log('Unpacking babel...');
-  projectPath = path.resolve(projectPath, '..');
-  const babelPath = path.resolve(__dirname, 'babel-templates');
-  const filesToCreate = fs.readdirSync(babelPath);
-  filesToCreate.forEach(file => {
-    fs.copyFileSync(path.resolve(babelPath, file), path.resolve(projectPath, file));
-  });
-  fs.moveSync(path.resolve(projectPath, 'src', 'package.json'), path.resolve(projectPath, 'package.json'));
+  if (answers.babel) {
+    console.log('Unpacking babel...');
+    projectPath = path.resolve(projectPath, '..');
+    const babelPath = path.resolve(__dirname, 'babel-templates');
+    const filesToCreate = fs.readdirSync(babelPath);
+    filesToCreate.forEach(file => {
+      fs.copyFileSync(path.resolve(babelPath, file), path.resolve(projectPath, file));
+    });
+    fs.moveSync(path.resolve(projectPath, 'src', 'package.json'), path.resolve(projectPath, 'package.json'));
+  }
 
   if (answers.packageManager !== 'none') {
     console.log('Running pacakge manager...\n');
