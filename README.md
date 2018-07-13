@@ -18,8 +18,8 @@ collide
 
 ## Features
 
-- Support for TypeScript apps *(work in progress)*
-- Support for eslint presets
+- Support for eslint presets.
+- Support for Babel.
 - Generation of boilerplate for several useful Hadron packages:
   - `hadron-express`
   - `hadron-validation`
@@ -27,6 +27,7 @@ collide
   - `hadron-events`
 - Support for both npm and yarn
 
-## Todo:
+## Upcoming:
 
+- Typescript templates.
 - Update Babel to version 7 when it comes out of beta.
