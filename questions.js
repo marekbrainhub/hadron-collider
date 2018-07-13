@@ -12,12 +12,6 @@ module.exports = [
     },
   },
   {
-    type: 'confirm',
-    name: 'typescript',
-    message: 'Do you want TypeScript support?',
-    default: false,
-  },
-  {
     type: 'checkbox',
     name: 'packages',
     message: 'Select features:',
@@ -33,6 +27,12 @@ module.exports = [
     name: 'linter',
     message: 'What config of ESLint do you want to use?',
     choices: ['brainhub', 'standard', 'airbnb', 'none'],
+  },
+  {
+    type: 'confirm',
+    name: 'babel',
+    message: 'Do you want to initialize Babel?',
+    default: false,
   },
   {
     type: 'list',
